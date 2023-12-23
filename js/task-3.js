@@ -1,8 +1,6 @@
 function checkForSpam (message) {
-    let newMessage = message.toLowerCase();
-    const tabooWord1 = "spam";
-    const tabooWord2 = "sale"
-    return newMessage.includes(tabooWord1) || newMessage.includes(tabooWord2)
+    const normalizedMessage = message.toLowerCase();
+    return normalizedMessage.includes("spam") || normalizedMessage.includes("sale");
 }
 
 console.log(checkForSpam("Latest technology news")); 
